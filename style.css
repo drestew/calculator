@@ -1,0 +1,176 @@
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+  
+  @font-face {
+    font-family: 'Digital7';
+    src: url('../digital-7-font/Digital7-1e1Z.ttf');
+  }
+  
+  .calculator {
+    display: flex;
+    align-self: center;
+    height: 80vh;
+    width: 30vw;
+    grid-area: calc;
+    background: rgb(36, 101, 145);
+    display: grid;
+    grid-template-rows: 1fr repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      'display . . .'
+      'off . on backspace'
+      'clear square-root squared divide'
+      'seven eight nine multiply'
+      'four five six subtract'
+      'one two three add'
+      'zero . decimal equal';
+    grid-gap: 0.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 0.2px black solid;
+    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.6);
+    border-radius: 0.5rem;
+  }
+  
+  /******************************************
+  /* ADDITIONAL STYLES
+  /*******************************************/
+  
+  button {
+    box-shadow: 0 0.3rem 0 rgb(26, 73, 104);
+    border-radius: 0.5rem;
+    transition: all 0.2 ease;
+  }
+  
+  button:active {
+    box-shadow: none;
+    background: rgb(202, 202, 202);
+  }
+  
+  .decimal {
+    grid-area: decimal;
+    font-size: 2rem;
+  }
+  
+  .number--0 {
+    grid-area: zero;
+    grid-column: span 2;
+  }
+  
+  .number--1 {
+    grid-area: one;
+  }
+  
+  .number--2 {
+    grid-area: two;
+  }
+  
+  .number--3 {
+    grid-area: three;
+  }
+  
+  .number--4 {
+    grid-area: four;
+  }
+  
+  .number--5 {
+    grid-area: five;
+  }
+  
+  .number--6 {
+    grid-area: six;
+  }
+  
+  .number--7 {
+    grid-area: seven;
+  }
+  
+  .number--8 {
+    grid-area: eight;
+  }
+  
+  .number--9 {
+    grid-area: nine;
+  }
+  
+  .equal {
+    grid-area: equal;
+  }
+  
+  .add {
+    grid-area: add;
+  }
+  
+  .subtract {
+    grid-area: subtract;
+  }
+  
+  .multiply {
+    grid-area: multiply;
+  }
+  
+  .divide {
+    grid-area: divide;
+  }
+  
+  .clear {
+    grid-area: clear;
+  }
+  
+  .square-root {
+    grid-area: square-root;
+  }
+  
+  .off {
+    grid-area: off;
+    grid-column: span 2;
+  }
+  
+  .on {
+    grid-area: on;
+  }
+  
+  .backspace {
+    grid-area: backspace;
+  }
+  
+  .squared {
+    grid-area: squared;
+  }
+  
+  .screen {
+    grid-area: display;
+    grid-column: span 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+    background: rgb(163, 135, 81);
+    font-size: 2rem;
+    font-family: 'Digital7';
+    height: 6rem;
+    border-radius: 0.2rem;
+    position: relative;
+  }
+  
+  .equation {
+    position: absolute;
+    top: -0.8rem;
+    font-size: 1rem;
+  }
+  
+  .calc-input {
+    margin: 0;
+    
+    overflow: hidden;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
