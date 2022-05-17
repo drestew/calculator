@@ -174,3 +174,6 @@
     display: none;
   }
   
+  .operator {
+    background-color: rgb(148, 56, 167);
+  }
